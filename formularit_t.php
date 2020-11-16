@@ -38,14 +38,7 @@
         echo $sqlt;
         $mysql->query($sqlt) or die($mysql->error);
 
-
-        
-        $sqlid="SELECT codi FROM ticket ORDER BY codi DESC LIMIT 1";
-        $resultatsid = $mysql->query($sqlid);
-        $fila = $resultatsid->fetch_array();
-        echo $fila["codi"];
-
-
+        header("formulari_dt.php");
 
     }
     
