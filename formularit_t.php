@@ -18,15 +18,36 @@
     $sql= "SELECT codi,nom FROM client";
     $resultat = $mysql->query($sql);
 ?>
-<form action="formularit_dt.php" method="post">
+<form action="formularit_t.php" method="post">
 <select name="client" id="">
+<option value=""></option>
 <?php
     while($fila = $resultat->fetch_array()){
         echo "<option value='" . $fila['codi'] . "'>" . $fila['nom'] . "</option>";
     }
-    $mysql->close();
     ?>
     </select>
+    <br>
+    <input type="submit" name="submit" value="Crear ticket">
+
     </form>
+    <?php 
+    if(isset($_REQUEST["submit"])){
+        $client = $_REQUEST["client"];
+        $sqlt="INSERT INTO ticket (data_ticket,total,codi_c) VALUES (NOW(),NULL,$client)";
+        echo $sqlt;
+        $mysql->query($sqlt) or die($mysql->error);
+        $sqlid=""
+
+
+    }
+    
+
+
+
+    
+    $mysql->close();
+
+    ?>
 </body>
 </html>
