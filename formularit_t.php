@@ -21,7 +21,9 @@
 <form action="formularit_t.php" method="post">
 <select name="client" id="">
 <option value=""></option>
+<!-- AIXO ES UN COMENTARI -->
 <?php
+//AIXO ES UN COMENTARI
     while($fila = $resultat->fetch_array()){
         echo "<option value='" . $fila['codi'] . "'>" . $fila['nom'] . "</option>";
     }
@@ -38,7 +40,7 @@
         echo $sqlt;
         $mysql->query($sqlt) or die($mysql->error);
 
-        header("formulari_dt.php");
+        header("Location:formulari_dt.php");
 
     }
     
