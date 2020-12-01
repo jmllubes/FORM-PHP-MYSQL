@@ -12,7 +12,7 @@
     <button onclick="ticket()">Ticket</button>
     <button onclick="detall()">Detall ticket</button>
     <button onclick="client()">Client</button>
-    </select>
+    
     <form action="form_display.php" method="post">
 
         <br>
