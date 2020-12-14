@@ -22,10 +22,11 @@
     <?php
     if(isset($_REQUEST['submit'])){
         $nomusuari = $_REQUEST["nom"];
-        copy($_FILES['foto']['tmp_name'], $nomusuari . ".jpg");
+        $correu = $_REQUEST["correu"];
+        copy($_FILES['foto']['tmp_name'], $correu . ".jpg");
         echo "La foto se registro en el servidor.<br>";
         
-        echo "<img src=". $nomusuari . ".jpg>";
+        echo "<img src=". $correu . ".jpg>";
 
     }
   
