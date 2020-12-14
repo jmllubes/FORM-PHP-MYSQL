@@ -9,12 +9,11 @@
 <body>
     <form action="form_image.php" method="post" enctype="multipart/form-data">
         Nom:
-        <input type="text" name="nom" id="" required><br>
+        <input type="text" name="nom" placeholder="Pon tu nombre" id="" required><br>
         Data de naixement:
         <input type="date" name="data" id="" required><br>
         Correu:
         <input type="email" name="correu" id="" required><br>
-
         Selecciona la foto:
         <input type="file" name="foto" required><br>
         <input type="submit" name="submit" value="Enviar">
