@@ -19,7 +19,7 @@
         Data de naixement:
         <input type="date" name="data" id="" ><br>
         Correu:
-        <input type="email" name="correu" id="" ><br>
+        <input type="email" name="correu" id="" value="carme@gmail.com"><br>
         Selecciona la foto:
         <input type="file" name="foto" ><br>
         <input type="submit" name="submit" value="Insertar">
@@ -65,6 +65,7 @@
             <th>Data Naixement</th>
             <th>Imatge</th>
             <th>Borrar</th>
+            <th>Actualitzar</th>
         </tr>
 
         <?php
@@ -76,6 +77,7 @@
             echo "<td>" . $fila["Data_naixement"] . "</td>";
             echo "<td>" . "<img src=" . $ruta . $fila["Correu"] . ".jpg height='60px' width='60px'>" . "</td>";
             echo "<td>" . "<a href=borrar.php?correu=" . $fila["Correu"].">" . $fila["Correu"] . "</a></td>";
+            echo "<td>" . "<a href=actualitzar.php?correu=" . $fila["Correu"].">" . $fila["Correu"] . "</a></td>";
             echo "</tr>";
 
         }
