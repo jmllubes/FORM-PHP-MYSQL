@@ -15,11 +15,11 @@
 <body>
     <form action="form_image.php" method="post" enctype="multipart/form-data">
         Nom:
-        <input type="text" name="nom" placeholder="Pon tu nombre" id="" ><br>
+        <input type="text"  name="nom" placeholder="Pon tu nombre" id="" ><br>
         Data de naixement:
         <input type="date" name="data" id="" ><br>
         Correu:
-        <input type="email" name="correu" id="" value="carme@gmail.com"><br>
+        <input type="email" name="correu" id="" ><br>
         Selecciona la foto:
         <input type="file" name="foto" ><br>
         <input type="submit" name="submit" value="Insertar">

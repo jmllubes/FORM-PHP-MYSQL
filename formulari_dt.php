@@ -27,7 +27,9 @@
             <option value=""></option>
             <?php
     while($fila = $resultat->fetch_array()){
-        echo "<option value='" . $fila['codi'] . "'>" . $fila['nom'] . " " . $fila['preu'] . "</option>";
+        echo "<input type='text' value='" . $fila['nom'] . "'>" . $fila['nom'] . " " . $fila['preu'] . "</input>";
+        echo "<input type='text' value='" . $fila['data'] . "'>" . $fila['nom'] . " " . $fila['preu'] . "</input>";
+        echo "<input type='text' value='" . $fila['correu'] . "'>" . $fila['nom'] . " " . $fila['preu'] . "</input>";
     }
 
 ?>
